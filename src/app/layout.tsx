@@ -14,8 +14,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <h1>Layout</h1>
-        {children}
+        <h1>
+          <a href="/">WEB</a>
+        </h1>
+        <ul>
+          <li>
+            <a href="/read/1">html</a>
+          </li>
+          <li>
+            <a href="/read/2">css</a>
+          </li>
+        </ul>
+        <article>{children}</article>
+        <ul>
+          <li>
+            <a href="/create">create</a>
+          </li>
+          <li>
+            <a href="/update/1">update</a>
+          </li>
+          <li>
+            <button>delete</button>
+          </li>
+        </ul>
       </body>
     </html>
   );
