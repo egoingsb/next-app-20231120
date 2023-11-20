@@ -1,6 +1,7 @@
 import "./globals.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Control from "./Control";
 type post = {
   id: string;
   title: string;
@@ -33,17 +34,7 @@ export default async function RootLayout({
           })}
         </ul>
         <article>{children}</article>
-        <ul>
-          <li>
-            <Link href="/create">create</Link>
-          </li>
-          <li>
-            <Link href="/update/1">update</Link>
-          </li>
-          <li>
-            <button>delete</button>
-          </li>
-        </ul>
+        <Control />
       </body>
     </html>
   );
