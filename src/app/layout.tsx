@@ -11,7 +11,9 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const res = await fetch("http://localhost:9999/posts");
+  const res = await fetch("http://localhost:9999/posts", {
+    next: { revalidate: 0 },
+  });
   const posts = await res.json();
   return (
     <html lang="en">
